@@ -12,7 +12,8 @@
 void moveZeroes(int* nums, int numsSize) {
 	int i = 0;
 	int j = 0;
-	while (i < numsSize)
+	int k = 0;
+	while (k < numsSize)
 	{
 		while (i<numsSize&&nums[i] != 0)
 		{
@@ -33,12 +34,13 @@ void moveZeroes(int* nums, int numsSize) {
 			nums[i] = nums[j];
 			nums[j] = tmp;
 		}
+		k++;
 	}
 }
 
 int main()
 {
-	int nums[] = { 1,0 };
+	int nums[] = { 0, 1, 0, 3, 12 };
 	int numsSize = sizeof(nums) / sizeof(nums[0]);
 	for (int i = 0; i < numsSize; i++)
 	{
